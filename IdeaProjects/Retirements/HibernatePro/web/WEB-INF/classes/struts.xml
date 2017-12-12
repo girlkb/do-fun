@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- setting encoding,DynamicMethod,language
+    <constant name="struts.custom.i18n.resources" value="messageResource"></constant>
+   -->
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+
+
+    <package name="mytest"  extends="struts-default,json-default">
+
+        <action name="login" method="login" class="com.mytest.action.LoginAction"  >
+           <result type="json"></result>
+        </action>
+
+        <action name="register" method="register" class="com.mytest.action.RegisterAction"  >
+            <result type="json"></result>
+        </action>
+
+        <action name="findNumsByUid" method="findNumByUId" class="com.mytest.action.FindByIdAction"  >
+            <result type="json"></result>
+        </action>
+
+        <action name="findSoftNums" method="findSoftNums" class="com.mytest.action.FindByIdAction"  >
+            <result type="json"></result>
+        </action>
+
+        <action name="createSoftNums" method="createSoftNums" class="com.mytest.action.FindByIdAction"  >
+            <result type="json"></result>
+        </action>
+
+        <action name="loginHardNo" method="loginHardNo" class="com.mytest.action.FindByIdAction"  >
+            <result type="json"></result>
+        </action>
+
+        <action name="returnSoftNo" method="returnSoftNo" class="com.mytest.action.FindByIdAction"  >
+            <result type="json"></result>
+        </action>
+
+        <action name="deleteHardNo" method="deleteHardNo" class="com.mytest.action.FindByIdAction"  >
+            <result type="json"></result>
+        </action>
+
+    </package>
+
+</struts>
